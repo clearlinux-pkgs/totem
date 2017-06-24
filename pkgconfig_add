@@ -1,0 +1,10 @@
+# This file contains additional pkgconfig build requirements that did
+# not get picked up automatically. One name per line, no whitespace.
+clutter-1.0
+gstreamer-1.0
+gstreamer-plugins-base-1.0
+clutter-gtk-1.0
+clutter-gst-3.0
+gsettings-desktop-schemas
+gnome-desktop-3.0
+pygobject-3.0

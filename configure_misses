@@ -1,0 +1,4 @@
+Configure miss: pylint
+Configure miss: lirc_init in -llirc_client
+Configure miss: whether to enable debugging
+Configure miss: appstream-util
