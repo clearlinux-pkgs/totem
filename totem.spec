@@ -4,7 +4,7 @@
 #
 Name     : totem
 Version  : 3.24.0
-Release  : 2
+Release  : 3
 URL      : http://ftp.gnome.org/pub/gnome/sources/totem/3.24/totem-3.24.0.tar.xz
 Source0  : http://ftp.gnome.org/pub/gnome/sources/totem/3.24/totem-3.24.0.tar.xz
 Summary  : Movie player for GNOME 2
@@ -16,10 +16,12 @@ Requires: totem-lib
 Requires: totem-doc
 Requires: totem-locales
 Requires: grilo
+Requires: grilo-plugins
 BuildRequires : docbook-xml
 BuildRequires : gettext
 BuildRequires : gobject-introspection-dev
 BuildRequires : grilo-dev
+BuildRequires : grilo-plugins
 BuildRequires : gst-plugins-good
 BuildRequires : gtk-doc
 BuildRequires : gtk-doc-dev
@@ -114,7 +116,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1498357110
+export SOURCE_DATE_EPOCH=1498400786
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
@@ -126,7 +128,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1498357110
+export SOURCE_DATE_EPOCH=1498400786
 rm -rf %{buildroot}
 %make_install
 %find_lang totem

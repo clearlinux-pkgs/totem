@@ -6,3 +6,4 @@ libpeas-dev
 gobject-introspection-dev
 grilo-dev
 totem-pl-parser-dev
+grilo-plugins
