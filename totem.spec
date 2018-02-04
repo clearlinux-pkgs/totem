@@ -4,7 +4,7 @@
 #
 Name     : totem
 Version  : 3.26.0
-Release  : 5
+Release  : 6
 URL      : https://download.gnome.org/sources/totem/3.26/totem-3.26.0.tar.xz
 Source0  : https://download.gnome.org/sources/totem/3.26/totem-3.26.0.tar.xz
 Summary  : Totem Movie Player plugin API
@@ -119,7 +119,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1508339872
+export SOURCE_DATE_EPOCH=1517708087
 CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --prefix /usr --buildtype=plain -Denable-vala=no builddir
 ninja -v -C builddir
 
@@ -132,25 +132,25 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /usr/lib64/totem/plugins/apple-trailers/apple-trailers.plugin
 /usr/lib64/totem/plugins/autoload-subtitles/autoload-subtitles.plugin
 /usr/lib64/totem/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin
+/usr/lib64/totem/plugins/dbus/__pycache__/dbusservice.cpython-36.pyc
 /usr/lib64/totem/plugins/dbus/dbusservice.plugin
 /usr/lib64/totem/plugins/dbus/dbusservice.py
-/usr/lib64/totem/plugins/dbus/dbusservice.pyc
 /usr/lib64/totem/plugins/gromit/gromit.plugin
 /usr/lib64/totem/plugins/im-status/totem-im-status.plugin
 /usr/lib64/totem/plugins/media-player-keys/media-player-keys.plugin
 /usr/lib64/totem/plugins/ontop/ontop.plugin
+/usr/lib64/totem/plugins/opensubtitles/__pycache__/hash.cpython-36.pyc
+/usr/lib64/totem/plugins/opensubtitles/__pycache__/opensubtitles.cpython-36.pyc
 /usr/lib64/totem/plugins/opensubtitles/hash.py
-/usr/lib64/totem/plugins/opensubtitles/hash.pyc
 /usr/lib64/totem/plugins/opensubtitles/opensubtitles.plugin
 /usr/lib64/totem/plugins/opensubtitles/opensubtitles.py
-/usr/lib64/totem/plugins/opensubtitles/opensubtitles.pyc
 /usr/lib64/totem/plugins/opensubtitles/opensubtitles.ui
 /usr/lib64/totem/plugins/properties/movie-properties.plugin
+/usr/lib64/totem/plugins/pythonconsole/__pycache__/console.cpython-36.pyc
+/usr/lib64/totem/plugins/pythonconsole/__pycache__/pythonconsole.cpython-36.pyc
 /usr/lib64/totem/plugins/pythonconsole/console.py
-/usr/lib64/totem/plugins/pythonconsole/console.pyc
 /usr/lib64/totem/plugins/pythonconsole/pythonconsole.plugin
 /usr/lib64/totem/plugins/pythonconsole/pythonconsole.py
-/usr/lib64/totem/plugins/pythonconsole/pythonconsole.pyc
 /usr/lib64/totem/plugins/recent/recent.plugin
 /usr/lib64/totem/plugins/save-file/save-file.plugin
 /usr/lib64/totem/plugins/screensaver/screensaver.plugin
