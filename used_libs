@@ -30,4 +30,5 @@ libpeas-1.0.so.0
 libpeas-gtk-1.0.so.0
 libpthread.so.0
 libtotem-plparser.so.18
+libwayland-server.so.0
 libxml2.so.2
