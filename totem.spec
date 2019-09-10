@@ -4,7 +4,7 @@
 #
 Name     : totem
 Version  : 3.34.0
-Release  : 16
+Release  : 17
 URL      : https://download.gnome.org/sources/totem/3.34/totem-3.34.0.tar.xz
 Source0  : https://download.gnome.org/sources/totem/3.34/totem-3.34.0.tar.xz
 Summary  : Movie player for the GNOME desktop based on GStreamer
