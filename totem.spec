@@ -4,7 +4,7 @@
 #
 Name     : totem
 Version  : 3.34.1
-Release  : 18
+Release  : 19
 URL      : https://download.gnome.org/sources/totem/3.34/totem-3.34.1.tar.xz
 Source0  : https://download.gnome.org/sources/totem/3.34/totem-3.34.1.tar.xz
 Summary  : Totem Movie Player plugin API
@@ -147,25 +147,33 @@ man components for the totem package.
 
 %prep
 %setup -q -n totem-3.34.1
+cd %{_builddir}/totem-3.34.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570227308
+export SOURCE_DATE_EPOCH=1586284846
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --libdir=lib64 --prefix=/usr --buildtype=plain -Denable-vala=no  builddir
 ninja -v -C builddir
 
+%check
+export LANG=C.UTF-8
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
+meson test -C builddir || :
+
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/totem
-cp COPYING %{buildroot}/usr/share/package-licenses/totem/COPYING
-cp license_change %{buildroot}/usr/share/package-licenses/totem/license_change
+cp %{_builddir}/totem-3.34.1/COPYING %{buildroot}/usr/share/package-licenses/totem/10782dd732f42f49918c839e8a5e2894c508b079
+cp %{_builddir}/totem-3.34.1/license_change %{buildroot}/usr/share/package-licenses/totem/5fda7ef0ea822add58f4d3769f593d1c8b6d2df7
 DESTDIR=%{buildroot} ninja -C builddir install
 %find_lang totem
 
@@ -999,8 +1007,8 @@ DESTDIR=%{buildroot} ninja -C builddir install
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/totem/COPYING
-/usr/share/package-licenses/totem/license_change
+/usr/share/package-licenses/totem/10782dd732f42f49918c839e8a5e2894c508b079
+/usr/share/package-licenses/totem/5fda7ef0ea822add58f4d3769f593d1c8b6d2df7
 
 %files man
 %defattr(0644,root,root,0755)
