@@ -4,7 +4,7 @@
 #
 Name     : totem
 Version  : 3.38.1
-Release  : 22
+Release  : 23
 URL      : https://download.gnome.org/sources/totem/3.38/totem-3.38.1.tar.xz
 Source0  : https://download.gnome.org/sources/totem/3.38/totem-3.38.1.tar.xz
 Summary  : Totem Movie Player plugin API
@@ -28,6 +28,7 @@ BuildRequires : gobject-introspection-dev
 BuildRequires : grilo
 BuildRequires : grilo-dev
 BuildRequires : grilo-plugins
+BuildRequires : gsettings-desktop-schemas
 BuildRequires : gst-plugins-good
 BuildRequires : intltool
 BuildRequires : itstool
@@ -50,7 +51,6 @@ BuildRequires : pkgconfig(gtk+-3.0)
 BuildRequires : pkgconfig(libnautilus-extension)
 BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : pkgconfig(pygobject-3.0)
-BuildRequires : pylint
 BuildRequires : totem-pl-parser-dev
 
 %description
@@ -154,7 +154,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1623870837
+export SOURCE_DATE_EPOCH=1629662517
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -168,6 +168,11 @@ export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
+# Tests require some glib schemas to be initialized
+target=$HOME/.local/share/glib-2.0/schemas
+mkdir -p $target
+glib-compile-schemas --targetdir=$target /usr/share/glib-2.0/schemas
+export XDG_DATA_DIRS="$HOME/.local/share${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}"
 meson test -C builddir || :
 
 %install

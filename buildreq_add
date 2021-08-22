@@ -7,8 +7,9 @@ gobject-introspection-dev
 grilo-dev
 totem-pl-parser-dev
 grilo-plugins
-pylint
 glibc-bin
 libxslt-bin
 intltool
 docbook-xml
+appstream-glib
+gsettings-desktop-schemas
