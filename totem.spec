@@ -4,7 +4,7 @@
 #
 Name     : totem
 Version  : 3.38.2
-Release  : 24
+Release  : 25
 URL      : https://download.gnome.org/sources/totem/3.38/totem-3.38.2.tar.xz
 Source0  : https://download.gnome.org/sources/totem/3.38/totem-3.38.2.tar.xz
 Summary  : Totem Movie Player plugin API
@@ -25,7 +25,6 @@ BuildRequires : buildreq-meson
 BuildRequires : docbook-xml
 BuildRequires : glibc-bin
 BuildRequires : gobject-introspection-dev
-BuildRequires : grilo
 BuildRequires : grilo-dev
 BuildRequires : grilo-plugins
 BuildRequires : gsettings-desktop-schemas
@@ -154,13 +153,13 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1634076410
+export SOURCE_DATE_EPOCH=1643521041
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
 export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
-CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --libdir=lib64 --prefix=/usr --buildtype=plain -Denable-vala=no  builddir
+CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --libdir=lib64 --prefix=/usr --buildtype=plain   builddir
 ninja -v -C builddir
 
 %check
