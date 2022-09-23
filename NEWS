@@ -1,5 +1,28 @@
 New features and significant updates in version...
 
+Major changes in 43.0:
+- Remove obsolete Bugzilla entries from desktop file
+- Translation updates
+
+Major changes in 43.rc:
+- Fix videos not playing when opening through nautilus 43
+- Translation updates
+
+Major changes in 43.beta:
+- Throw a better error if OpenGL couldn't init
+- Translate DVD/VCD device errors
+- Save screenshots into ~/Pictures/Screenshots
+- Make search entry keyboard navigable
+- Add playlist page to GTK inspector (disabled by default)
+- Fix fullscreen header bar not showing up
+
+Major changes in 43.alpha:
+- Update thumbnailing code for gnome-desktop API changes
+- Fix crashes and warnings when some plugins are missing
+- Use GResources to load UI files, simplify plugin declarations,
+  and remove a lot of unused code
+- Update man page
+
 Major changes in 42.0:
 - Updated appdata screenshots
 - Fix screenshot functionality not working since the port to
