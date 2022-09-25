@@ -4,7 +4,7 @@
 #
 Name     : totem
 Version  : 43.0
-Release  : 33
+Release  : 34
 URL      : https://download.gnome.org/sources/totem/43/totem-43.0.tar.xz
 Source0  : https://download.gnome.org/sources/totem/43/totem-43.0.tar.xz
 Summary  : Totem Movie Player plugin API
@@ -155,7 +155,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
+<<<<<<< Updated upstream
 export SOURCE_DATE_EPOCH=1664076930
+=======
+export SOURCE_DATE_EPOCH=1664063513
+>>>>>>> Stashed changes
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
