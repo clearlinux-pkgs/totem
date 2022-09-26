@@ -4,7 +4,7 @@
 #
 Name     : totem
 Version  : 43.0
-Release  : 34
+Release  : 35
 URL      : https://download.gnome.org/sources/totem/43/totem-43.0.tar.xz
 Source0  : https://download.gnome.org/sources/totem/43/totem-43.0.tar.xz
 Summary  : Totem Movie Player plugin API
@@ -155,11 +155,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-<<<<<<< Updated upstream
-export SOURCE_DATE_EPOCH=1664076930
-=======
-export SOURCE_DATE_EPOCH=1664063513
->>>>>>> Stashed changes
+export SOURCE_DATE_EPOCH=1664162595
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -182,8 +178,8 @@ meson test -C builddir || :
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/totem
-cp %{_builddir}/totem-%{version}/COPYING %{buildroot}/usr/share/package-licenses/totem/f9c6cf8fc8d0a681122676c23b5cf0e75b1c2362
-cp %{_builddir}/totem-%{version}/license_change %{buildroot}/usr/share/package-licenses/totem/5fda7ef0ea822add58f4d3769f593d1c8b6d2df7
+cp %{_builddir}/totem-%{version}/COPYING %{buildroot}/usr/share/package-licenses/totem/f9c6cf8fc8d0a681122676c23b5cf0e75b1c2362 || :
+cp %{_builddir}/totem-%{version}/license_change %{buildroot}/usr/share/package-licenses/totem/5fda7ef0ea822add58f4d3769f593d1c8b6d2df7 || :
 DESTDIR=%{buildroot} ninja -C builddir install
 %find_lang totem
 
