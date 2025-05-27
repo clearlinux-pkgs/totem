@@ -71,6 +71,7 @@ libtotem.so.0:bacon_video_widget_set_volume
 libtotem.so.0:bacon_video_widget_set_zoom
 libtotem.so.0:bacon_video_widget_step
 libtotem.so.0:bacon_video_widget_stop
+libtotem.so.0:bacon_video_widget_use_gl
 libtotem.so.0:bvw_aspect_ratio_get_type
 libtotem.so.0:bvw_audio_output_type_get_type
 libtotem.so.0:bvw_dvd_event_get_type
@@ -156,6 +157,7 @@ libtotem.so.0:totem_grilo_set_current_page
 libtotem.so.0:totem_grilo_setup_icons
 libtotem.so.0:totem_grilo_start
 libtotem.so.0:totem_gst_disable_hardware_decoders
+libtotem.so.0:totem_gst_ensure_newer_hardware_decoders
 libtotem.so.0:totem_gst_message_print
 libtotem.so.0:totem_gst_playbin_get_frame
 libtotem.so.0:totem_gst_tag_list_get_cover
