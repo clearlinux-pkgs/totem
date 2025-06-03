@@ -7,7 +7,7 @@
 #
 Name     : totem
 Version  : 43.2
-Release  : 48
+Release  : 49
 URL      : https://download.gnome.org/sources/totem/43/totem-43.2.tar.xz
 Source0  : https://download.gnome.org/sources/totem/43/totem-43.2.tar.xz
 Summary  : Totem Movie Player plugin API
